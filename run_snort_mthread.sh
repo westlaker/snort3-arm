@@ -29,8 +29,9 @@ echo "$PCAP_LIST_OPT"
 HYPERSCAN="search_engine.search_method = \"hyperscan\""
 #COMMAND="taskset -c 1-$num snort -z 0  -v --rule-path /usr/local/etc/rules/ -c /usr/local/etc/snort/snort.lua --lua 'search_engine.search_method = "hyperscan"' --pcap-list="$PCAP_LISTi""
 if test $num -eq 80
-	CMD="taskset -c 0-79 snort -z 0  -v --rule-path /usr/local/etc/rules/ -c /usr/local/etc/snort/snort.lua --lua '$HYPERSCAN' $PCAP_LIST_OPT"
 then
+	CMD="taskset -c 0-79 snort -z 0  -v --rule-path /usr/local/etc/rules/ -c /usr/local/etc/snort/snort.lua --lua '$HYPERSCAN' $PCAP_LIST_OPT"
+else
 	CMD="taskset -c 1-$num snort -z 0  -v --rule-path /usr/local/etc/rules/ -c /usr/local/etc/snort/snort.lua --lua '$HYPERSCAN' $PCAP_LIST_OPT"
 fi
 
