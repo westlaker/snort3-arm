@@ -41,3 +41,9 @@ snort -V
            Using LZMA version 5.2.4
 
 
+For test with multiple thread on multiple core, run:
+
+./run_snort_mthread.sh 32
+
+the snort will spawn 32 packet processing threads on 32 cores to process 32 same pcap files at same time.
+
