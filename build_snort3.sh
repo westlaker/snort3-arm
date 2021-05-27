@@ -33,7 +33,7 @@ tar xzvf boost_1_74_0.tar.gz
 
 git clone https://github.com/VectorCamp/vectorscan && \
 cd vectorscan && \
-git checkout v5.3.2 && \
+git checkout v5.4.2+vectorscan && \
 cd .. && \
 mkdir hyperscan-build && \
 cd hyperscan-build/ && \
